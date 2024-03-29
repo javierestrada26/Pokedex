@@ -4,7 +4,6 @@ import {
   Animated,
   ImageStyle,
   StyleProp,
-  Text,
   View,
 } from 'react-native';
 import {useAnimation} from '../../hooks/useAnimation';
@@ -23,13 +22,14 @@ export const FadeInImage = ({uri, style}: Props) => {
   useEffect(() => {
     return () => {
       isDispose.current = true;
-      fadeIn({});
-      setIsLoading(false);
+
     };
   },[])
 
   const onLoadEnd = () => {
     if(isDispose.current) return;
+    fadeIn({});
+    setIsLoading(false);
   }
 
   return (

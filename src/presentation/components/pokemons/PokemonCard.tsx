@@ -22,8 +22,8 @@ export const PokemonCard = ({pokemon}:Props) => {
             />
         </View>
         {/**POkemon image */}
-        <Image
-            source={{uri: pokemon.avatar}}
+        <FadeInImage
+            uri={ pokemon.avatar}
             style={styles.pokemonImage}
         />
         {/**POkemon types */}
